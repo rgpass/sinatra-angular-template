@@ -1,0 +1,11 @@
+html
+  head
+    meta content="width=device-width, initial-scale=1" name="viewport"
+    link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+    script src="#{javascript_path 'app'}"
+    link rel="stylesheet" href="#{stylesheet_path 'app'}"
+    title = @title ? "CarNotify | #{@title}" : "CarNotify"
+  body ng-app='myApp'
+    == slim :_navigation
+    .container-fluid
+      == yield
